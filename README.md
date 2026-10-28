@@ -1,54 +1,33 @@
-# README Template
+# Recommendation System: IBM Community
 
-Below is a template provided for use when building your README file for students.
+Recommendation engine for articles on the IBM Watson Studio platform, based on user-article interactions. Final project of the Udacity Data Scientist Nanodegree.
 
-# Project Title
+## Methods
 
-Project description goes here.
+- Rank based: most popular articles, also used for new users
+- User-user collaborative filtering: articles read by similar users (cosine similarity)
+- Content based: TF-IDF on the article titles, LSA (TruncatedSVD) and KMeans clustering
+- Matrix factorization: SVD on the user-item matrix to find similar articles
+
+## Files
+
+- `starter/Recommendations_with_IBM.ipynb`: notebook with all code and answers
+- `starter/Recommendations_with_IBM.html`: HTML export of the notebook
+- `starter/project_tests.py`, `starter/top_*.p`: tests provided by Udacity
+- `starter/data/user-item-interactions.csv`: user-article interactions
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
-
-### Dependencies
+Dependencies: Python 3, pandas, numpy, matplotlib, scikit-learn, Jupyter.
 
 ```
-Examples here
-```
-
-### Installation
-
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
+cd starter
+jupyter notebook Recommendations_with_IBM.ipynb
 ```
 
 ## Testing
 
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
+The tests from `project_tests.py` are called inside the notebook. After "Kernel > Restart Kernel and Run All Cells" every test prints a success message.
 
 ## License
 
